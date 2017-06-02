@@ -1,0 +1,24 @@
+<!doctype html>
+<HTML>
+<HEAD>
+	<TITLE> Javascript </TITLE>
+	<SCRIPT SRC="//code.jquery.com/jquery-3.0.0.js"></SCRIPT>
+		<!-- <SCRIPT SRC="test.js"></SCRIPT> -->
+</HEAD>
+<BODY>
+
+	<SPAN id="my_span">Try me!</SPAN>
+	<!-- <span onclick="alert('toto');">Hello World</span> -->
+	<script>
+	$(document).ready(function(){
+
+		$('#my_span').click(function(){
+			$.get('test.php?test=ok', function(data, status){
+			alert("Data: " + data + "\nStatus: " + status);
+			})
+		});
+	});
+	</script>
+
+</BODY>
+</HTML>

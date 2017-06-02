@@ -1,0 +1,43 @@
+<!doctype html>
+<HTML>
+<HEAD>
+	<STYLE>
+	#todo
+	{
+		border-radius: 10%;
+		width:200px;
+		height:200px;
+		/*background-color: yellow;*/
+	}
+	</STYLE>
+</HEAD>
+<BODY>
+	<div id="todo">
+		<div id="todo" onclick="my_func()" ></div>
+			<script>
+			document.getElementById("todo").style.backgroundColor = "red";
+			function my_func() {
+				var cercle = document.getElementById("todo");
+				if (cercle.style.backgroundColor == 'blue')
+					cercle.style.backgroundColor = "green";
+				else if (cercle.style.backgroundColor == 'green')
+					cercle.style.backgroundColor = "red";
+				else if (cercle.style.backgroundColor == 'red')
+					cercle.style.backgroundColor = "blue";
+				var taille = cercle.offsetWidth;
+				cercle.style.width = taille + 10 + 'px';
+				cercle.style.height = taille + 10 + 'px';
+				if (taille > 420)
+				{
+					alert("explosion !!! ");
+					cercle.style.width = 200 + 'px';
+					cercle.style.height = 200 + 'px';
+					cercle.style.backgroundColor = "red";
+				}
+			}
+			}
+			</script>
+		</div>
+	</div>
+</BODY>
+</HTML>

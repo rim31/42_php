@@ -1,0 +1,55 @@
+<!doctype html>
+<HTML>
+<HEAD>
+	<STYLE>
+	#ballon
+	{
+		border-radius: 100%;
+		width:200px;
+		height:200px;
+	}
+	</STYLE>
+</HEAD>
+<BODY>
+	<div id="ballon">
+		<div id="ballon" onclick="my_func()" onmouseout="degonfle()"></div>
+			<script>
+			document.getElementById("ballon").style.backgroundColor = "red";
+			function my_func() {
+				var cercle = document.getElementById("ballon");
+				if (cercle.style.backgroundColor == 'blue')
+					cercle.style.backgroundColor = "green";
+				else if (cercle.style.backgroundColor == 'green')
+					cercle.style.backgroundColor = "red";
+				else if (cercle.style.backgroundColor == 'red')
+					cercle.style.backgroundColor = "blue";
+				var taille = cercle.offsetWidth;
+				cercle.style.width = taille + 10 + 'px';
+				cercle.style.height = taille + 10 + 'px';
+				if (taille > 420)
+				{
+					alert("explosion !!! ");
+					cercle.style.width = 200 + 'px';
+					cercle.style.height = 200 + 'px';
+					cercle.style.backgroundColor = "red";
+				}
+			}
+			function degonfle() {
+				var cercle = document.getElementById("ballon");
+				var taille = cercle.offsetWidth;
+				if (taille > 200) {
+				cercle.style.width = taille - 5 + 'px';
+				cercle.style.height = taille - 5 + 'px';
+				if (cercle.style.backgroundColor == 'blue')
+					cercle.style.backgroundColor = "green";
+				else if (cercle.style.backgroundColor == 'green')
+					cercle.style.backgroundColor = "red";
+				else if (cercle.style.backgroundColor == 'red')
+					cercle.style.backgroundColor = "blue";
+				}
+			}
+			</script>
+		</div>
+	</div>
+</BODY>
+</HTML>

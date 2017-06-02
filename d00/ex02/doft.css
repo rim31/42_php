@@ -1,0 +1,104 @@
+
+<STYLE>
+	H1
+	{
+		color:red;
+	}
+	BODY
+	{
+		 background-color: #505050;
+	}
+	#doft
+	{
+		position: absolute;
+		top: 10px;
+		left: 120px;
+		width:auto;
+		height:125px;
+	}
+	#loupe
+	{
+		position: absolute;
+		top: 20px;
+		left: 1200px;
+ 		width:auto;
+		height:160px;
+	}
+	#reload
+	{
+		position: absolute;
+		top: 30px;
+		left: 1500px;
+		height: 25px; width: auto;
+	}
+	#close
+	{
+		position: absolute;
+		top: 130px;
+		left: 1480px;
+		height: 25px; width: auto;
+	}
+	div#hautdepage
+	{
+		border-radius: 10px;
+		margin-left: 100px;
+		margin-right: 200px;
+		box-shadow: 7px 7px 5px black;
+		width:1400px;
+		height:150px;
+		background-color: #909090;
+	}
+	div#centre
+	{
+		position: absolute;
+		top: 180px;
+		left: 320px;
+		float:left;
+		border-radius: 10px;
+		width:600px;
+		height:400px;
+		box-shadow: 7px 7px 5px black;
+		background-color:#909090;
+	}
+	div#piedpage
+	{
+		width:600px;
+		height:50px;
+		background-color:#33FF99;
+	}
+	div#menu
+	{
+		position: absolute;
+		top: 180px;
+		left: 120px;
+		float:left;
+		border-radius: 10px;
+		width:100px;
+		height:300px;
+		box-shadow: 7px 7px 5px black;
+		background-color:#909090;
+	}
+	div#droite
+	{
+		position: absolute;
+		top: 180px;
+		left: 1320px;
+		float:left;
+		border-radius: 10px;
+		width:100px;
+		height:300px;
+		box-shadow: 7px 7px 5px black;
+		background-color:#909090;
+	}
+	div#piedpage2
+	{
+		float:clear;
+		border-radius: 10px;
+		position: absolute;
+	    top: 800px; left: 70px;
+	    height: 130px; width: 500px;
+	    color: blue;
+		background-color:#88FF89;
+		box-shadow: 7px 7px 5px black;
+	}
+</STYLE>

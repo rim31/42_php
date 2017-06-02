@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>calc</title>
+	</head>
+	<body>
+		<input type="text" name="op1" id="op1">
+		<select name="op" id="op">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+			<option value="%">%</option>
+		</select>
+		<input type="text" name="op2" id="op2">
+		<input type="submit" name="sub" id="sub" value="Try me!">
+		<script type="text/javascript">
+			var op = document.getElementById('op');
+			var op1 = document.getElementById('op1');
+			var op2 = document.getElementById('op2');
+			var sub = document.getElementById('sub');
+			sub.addEventListener("click", function(){
+				n1 = parseInt(op1.value);
+				n2 = parseInt(op2.value);
+				o = op.value;
+				if (n1 < 0 || n2 < 0 || isNaN(n1) || isNaN(n2)) {
+					alert("Error :(");
+					console.log("Error :(");
+				}
+				else if ((o === '/' || o === '%') && n2 === 0) {
+					alert("It’s over 9000!");
+					console.log("It’s over 9000!");
+				}
+				else {
+					var res = eval(n1 + o + n2);
+					alert(res);
+					console.log(res);
+				}
+			});
+			setInterval(function() {
+				alert("Please, use me...");
+				console.log("Please, use me...");
+			}, 30000);
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ballon</title>
+		<style media="screen">
+			body{
+				text-align: center;
+			}
+			.ballon{
+				margin-left: auto;
+				margin-right: auto;
+				width: 200px;
+				height: 200px;
+				border-radius: 10000000px;
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="ballon" id="ballon">
+
+		</div>
+		<script type="text/javascript">
+			var height = 200;
+			var width = height;
+			var i = 0;
+			var color = new Array('red', 'green', 'blue');
+			var  ballon = document.getElementById('ballon');
+			ballon.addEventListener("click", function(){
+				height += 10;
+				width += 10;
+				if (height <= 420) {
+					i++;
+					if (i === 3)
+						i = 0;
+					ballon.style.background = color[i];
+					ballon.style.height = height + 'px';
+					ballon.style.width = width + 'px';
+				}
+				else {
+					i++;
+					if (i === 3)
+						i = 0;
+					ballon.style.background = color[i];
+					height = 200;
+					width = 200;
+					ballon.style.height = height + 'px';
+					ballon.style.width = width + 'px';
+				}
+});
+			ballon.addEventListener("mouseout", function(){
+				height -= 5;
+				width -= 5;
+				if (height >= 200) {
+					i--;
+					if (i === -1)
+						i = 2;
+					ballon.style.background = color[i];
+					ballon.style.height = height + 'px';
+					ballon.style.width = width + 'px';
+				}
+});
+		</script>
+	</body>
+</html>

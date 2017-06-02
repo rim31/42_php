@@ -1,0 +1,81 @@
+<!doctype html>
+<HTML>
+<HEAD>
+	<STYLE>
+	#ballon
+	{
+		border-radius: 10%;
+		width:200px;
+		height:200px;
+		background-color: pink;
+	}
+	</STYLE>
+</HEAD>
+<BODY onload="timer()">
+	<div id="ballon">
+		<FORM name="formulaire">
+		<input type="text" name="num1"><BR />
+		<select name="select">
+			<option value="+">+</option>
+			<option value="-" selected>-</option>
+			<option value="*">*</option>
+			<option value="/" selected>/</option>
+			<option value="%">%</option>
+		</select>
+		<BR />
+		<input type="text" name="num2"><BR />
+		<input type="submit" name="calcul" value="try me !"
+		onclick="calc()" >
+	</FORM>
+	</div>
+
+	<script>
+	function timer() {
+		setInterval(showalert, 30000);
+	}
+	function showalert(){
+		alert("Please, use me...");
+	}
+	function calc() {
+		var vnum1 = document.forms["formulaire"].elements["num1"].value;
+		var vnum2 = document.forms["formulaire"].elements["num2"].value;
+		var vselect = document.forms["formulaire"].elements["select"].value;
+		var result;
+		if (vnum1 < 0 || vnum2 < 0)
+			alert("Error :(");
+		else {
+			if (vselect === "+") {
+				result = vnum1 + vnum2;
+				alert(result);
+			}
+			else if (vselect === "-") {
+				result = vnum1 - vnum2;
+				alert(result);
+			}
+			else if (vselect === "*"){
+				result = vnum1 * vnum2;
+				alert(result);
+			}
+			else if (vselect === "/") {
+				if (vnum2 == 0)
+					alert("It's over 9000!");
+				else {
+					result = vnum1 / vnum2;
+					alert(result);
+				}
+			}
+			else if (vselect === "%") {
+				if (vnum2 == 0)
+					alert("It's over 9000!");
+				else {
+					result = vnum1 % vnum2;
+					alert(result);
+				}
+			}
+		}
+	}
+
+</script>
+
+</BODY>
+</HTML>

@@ -1,0 +1,75 @@
+<STYLE>
+	H1
+	{
+		text-align: center;
+	}
+	.poids
+	{
+		text-align: right;
+	}
+	.numero
+	{
+		text-align: left;
+	}
+	.metauxalcalins
+	{
+		color : black;
+	}
+	.metauxalcalinoterreux
+	{
+		color : orange;
+	}
+	.meteauxtransitions
+	{
+		color : red;
+	}
+	.autesmetaux
+	{
+		color : grey;
+	}
+	.elementsinconnus
+	{
+		color : white;
+	}
+	.gaznobles
+	{
+		color : black;
+	}
+	.halogenes
+	{
+		color : black;
+	}
+	.nonmetaux
+	{
+		color : black;
+	}
+	.metalloides
+	{
+		color : black;
+	}
+	.lanthanoides
+	{
+		color : black;
+	}
+	.actinides
+	{
+		color : black;
+	}
+	TABLE
+	{
+		position: absolue;
+		top: 10vw;
+		left: 10vw;
+		width: 100vw;
+		height: 80vw;
+		font-family: sans-serif;
+		text-align: center;
+	}
+	TD
+	{
+		border: 1px solid black;
+		width: 1vw;
+		height: 1vw;
+		font-size: 1vw;
+	}
+</STYLE>

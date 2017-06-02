@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ballon</title>
+		<style media="screen">
+			body{
+				text-align: center;
+			}
+			.ballon{
+				margin-left: auto;
+				margin-right: auto;
+				width: 200px;
+				height: 200px;
+				border-radius: 10000000px;
+				background-color: red;
+			}
+		</style>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="ballon" id="ballon">
+
+		</div>
+		<script type="text/javascript">
+			var height = 200;
+			var width = height;
+			var i = 0;
+			var color = new Array('red', 'green', 'blue');
+			$('#ballon').click(function(){
+				height += 10;
+				width += 10;
+				if (height <= 420) {
+					i++;
+					if (i === 3)
+						i = 0;
+					$('#ballon').css("background-color", color[i]).height(height + 'px').width(width + 'px');
+				}
+				else {
+					i++;
+					if (i === 3)
+						i = 0;
+					height = 200;
+					width = 200;
+					$('#ballon').css("background-color", color[i]).height(height + 'px').width(width + 'px');
+				}
+});
+			$('#ballon').mouseout(function(){
+				height -= 5;
+				width -= 5;
+				if (height >= 200) {
+					i--;
+					if (i === -1)
+						i = 2;
+					$('#ballon').css("background-color", color[i]).height(height + 'px').width(width + 'px');
+				}
+});
+		</script>
+	</body>
+</html>
